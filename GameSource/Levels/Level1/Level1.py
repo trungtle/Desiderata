@@ -18,6 +18,7 @@ import MVC.BController      as ns_controller
 import MVC.BView            as ns_view
 import MVC.BModelManager    as ns_model_manager
 
+from   GameSource import RESOURCE_DIR
 class Level(object):
     '''
     classdocs
@@ -52,7 +53,7 @@ class Level(object):
     
 
     def LoadResources(self):
-        pass
+        pygame.mixer.music.load(RESOURCE_DIR + "Sounds/DanceOfTheShadows.wav")
     
 
     def LevelUp(self):

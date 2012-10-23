@@ -4,11 +4,15 @@
 		"past":
 		{
 			"title": "The past",
-			"intro": "The leaves were rustling heavily in the dark night. The moon was high beyond branches, leaving fading trails on the road. Silent night...",
+			"intro": "The leaves were rustling heavily in the dark night. A deep blue moon was high beyond branches, leaving fading trails on the road. Silent night...",
 			"wake": "\"Wake up... wake up.\"",
-			"q1": "\"What's your name?\" a) Fonce b) Byonte c) Hirra",
-			"strange": "\"This is quite strange, I have never seen a human landed on this road before\"",
-			"q2": "\"Are you hurt?\""
+			"q1": "\"Are you hurt?\"",
+			"strange": "\"This is quite strange, I have never seen a human traveling on this road before...\"",
+			"kill": "\"I'm afraid that you have to die. As a guardian of the this forest road, I protect this place from unwanted intruders and ensure that no one knows about it. There is a reason I have never seen a human brave enough to come here before...\"",
+			"q2": "\"What is your name?\"",
+			"q3": "\"Do you have any last words?\"",
+			"death": "The heavy evening breeze felt uneasy as a cutting sound through the air broke the silence. A few seconds passed in stillness, and it was all gone... The night is cold, very cold.",
+			"end": "(To be continue...)"
 		},
 		"present":
 		{

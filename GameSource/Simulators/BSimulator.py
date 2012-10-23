@@ -24,6 +24,7 @@ class Simulator(object):
         self.begin          = False
 
     def Init(self):
+        pygame.mixer.music.play(-1)
         self.pathChoice     = random.randint(0, 0)
         self.BeginPath(self.pathChoice)
 
@@ -82,15 +83,28 @@ class KnowledgePath(Simulator):
         # If non-zero, retrieve answer
         if self.inputbox['max_word'] != 0:
             self.ans = self.inputbox['text']
+            print self.ans
+            print self.cur['valid_ans']
+            
+            # Check for valid answer
+            for a in self.cur['valid_ans']:
+                if self.ans.lower() == a.lower():
+                    # Advance story
+                    g_evManager.Post(evAdvance())
+        
+        # If no answer is required, advance
+        else:
+            g_evManager.Post(evAdvance())
+
+
 
     def Notify(self, event):
         if isinstance(event, evEnter):
-            # Retrieve path
+            self.GetAnswer()
+        
+        elif isinstance(event, evAdvance):
             self.AdvancePath(self.cur["next"])
             self.Refresh()
-
-        elif isinstance(event,evKeyDown):
-            self.GetAnswer()
 
         elif isinstance(event, evEnd):
             g_evManager.Post(evQuit())

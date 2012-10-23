@@ -18,7 +18,6 @@ class InputboxController(object):
 	def Refresh(self):
 		self.m["size"] = list(self.font.size(self.m["text"]))
 		if self.m['max_word'] == 0:
-			self.ClearText()
 			self.m['cursor'] = False
 		else:
 			self.m['cursor'] = True
@@ -31,6 +30,9 @@ class InputboxController(object):
 		if isinstance(event, evTick):
 			# Assume refresh rate is faster than key down event
 			self.Refresh()
+
+		elif isinstance(event, evAdvance):
+			self.ClearText()
 
 		elif isinstance(event, evKeyDown):
 			if event.key == K_BACKSPACE or event.key == K_DELETE:

@@ -86,8 +86,8 @@ class evRMouseDown(Event):
 # ------------------------------------------------------------------------------
 # In-game Events
 # ------------------------------------------------------------------------------
-class evCollision(Event):
+class evAdvance(Event):
     def __init__(self):
-        self.name = "Collision Event"
-        self.log = False 
-            
+        self.name = "Advance Event"
+        self.log = False
+

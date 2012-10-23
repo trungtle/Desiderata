@@ -19,20 +19,46 @@
 			{
 				"id": ["past", "q1"],
 				"next": ["past", "strange"],
-				"max_word": 1,
-				"valid_ans": ["Fonce", "Byonte", "Hirra"]
+				"max_word": 12,
+				"valid_ans": ["Yes", "No", "I don't know"]
 			},
 			"strange":
 			{
 				"id": ["past", "strange"],
-				"next": ["past", "q2"],
+				"next": ["past", "kill"],
 				"max_word": 0
 			},
+			"kill":
+			{
+				"id": ["past", "kill"],
+				"next": ["past", "q2"],
+				"max_word": 0
+			},			
 			"q2":
 			{
 				"id": ["past", "q2"],
+				"next": ["past", "q3"],
+				"max_word": 7,
+				"valid_ans": ["Stephan", "Douglas", "Sergey", "Doug"]
+			},
+			"q3":
+			{
+				"id": ["past", "q3"],
+				"next": ["past", "death"],
+				"max_word": 12,
+				"valid_ans": ["Yes", "No", "I don't know"]
+			},
+			"death":
+			{
+				"id": ["past", "death"],
+				"next": ["past", "end"],
+				"max_word": 0
+			},
+			"end":
+			{
+				"id": ["past", "end"],
 				"next": null,
-				"max_word": 3
+				"max_word": 0
 			}
 		}
 	}
