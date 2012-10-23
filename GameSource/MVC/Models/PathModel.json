@@ -1,0 +1,39 @@
+{
+	"knowledge":
+	{
+		"past":
+		{
+			"intro": 
+			{
+				"id": ["past", "intro"],
+				"next": ["past", "wake"],
+				"max_word": 0
+			},
+			"wake":
+			{
+				"id": ["past", "wake"],
+				"next": ["past", "q1"],
+				"max_word": 0
+			},
+			"q1":
+			{
+				"id": ["past", "q1"],
+				"next": ["past", "strange"],
+				"max_word": 1,
+				"valid_ans": ["Fonce", "Byonte", "Hirra"]
+			},
+			"strange":
+			{
+				"id": ["past", "strange"],
+				"next": ["past", "q2"],
+				"max_word": 0
+			},
+			"q2":
+			{
+				"id": ["past", "q2"],
+				"next": null,
+				"max_word": 3
+			}
+		}
+	}
+}

@@ -1,0 +1,23 @@
+{
+	"default":
+	{
+		"name": "label",
+		"pos": [0,0],
+		"size": [100,100],
+		"text": "Label"
+	},
+	"s":
+	{
+		"name": "label",
+		"pos": [100,150],
+		"size": [100,50],
+		"font_size": 32,
+		"text": "Desiderata",
+		"border": 1,
+		"font": "Ubuntu-L.ttf",
+		"padding": [10, 10, 10, 10],
+		"font_color": [10, 10, 10],
+		"frames": 5,
+		"line_len": 10
+	}
+}

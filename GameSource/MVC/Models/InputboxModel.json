@@ -1,0 +1,22 @@
+{
+	"default":
+	{
+		"name": "inputbox",
+		"pos": [0,0],
+		"size": [100,100],
+		"text": "inputbox"
+	},
+	"level1":
+	{
+		"name": "inputbox",
+		"pos": [50,400],
+		"size": [100,50],
+		"max_word": 0,
+		"font_size": 32,
+		"text": "",
+		"border": 1,
+		"font": "Ubuntu-L.ttf",
+		"padding": [10, 10, 10, 10],
+		"cursor": false
+	}
+}

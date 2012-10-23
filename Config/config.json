@@ -1,0 +1,20 @@
+{
+	"diags": 
+	{
+		"enable" : true
+	},
+	"view":
+	{
+		"fullscreen": false,
+		"size": [1024, 640],
+		"caption": "Desiderata"
+	},
+	"controller":
+	{
+
+	},
+	"model_manager":
+	{
+		
+	}
+}

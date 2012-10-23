@@ -1,0 +1,34 @@
+{
+	"knowledge":
+	{
+		"past":
+		{
+			"title": "The past",
+			"intro": "The leaves were rustling heavily in the dark night. The moon was high beyond branches, leaving fading trails on the road. Silent night...",
+			"wake": "\"Wake up... wake up.\"",
+			"q1": "\"What's your name?\" a) Fonce b) Byonte c) Hirra",
+			"strange": "\"This is quite strange, I have never seen a human landed on this road before\"",
+			"q2": "\"Are you hurt?\""
+		},
+		"present":
+		{
+
+		},
+		"future":
+		{
+
+		},
+		"judgement":
+		{
+
+		},
+		"resolution":
+		{
+
+		}
+	},
+	"power":
+	{
+
+	}
+}
