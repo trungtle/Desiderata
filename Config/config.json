@@ -16,5 +16,10 @@
 	"model_manager":
 	{
 		
+	},
+	"music":
+	{
+		"on": true,
+		"background": "DanceOfTheShadows.wav"
 	}
 }

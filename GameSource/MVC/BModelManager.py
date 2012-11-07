@@ -22,8 +22,8 @@ class ModelManager(object):
         self.views = {}
         self.models = {}
 
-    def Add(self, model):
-        name = model["name"] + str(ModelManager.MODEL_ID)
+    def Add(self, model, name):
+        name = name
         
         self.models[name] = model
 
@@ -39,20 +39,11 @@ class ModelManager(object):
 
         ModelManager.MODEL_ID += 1
 
+    def Get(self, name):
+        for k in self.models.keys():
+            if name == k:
+                return self.models[k]
+
     def Size(self):
         return len(self.models.keys())
 
-    def Inputbox(self):
-        for k in self.models.keys():
-            if 'inputbox' in k:
-                return self.models[k]
-
-    def InputboxController(self):
-        for k in self.models.keys():
-            if 'inputbox' in k:
-                return self.controllers[k]
-
-    def StoryLabel(self):
-        for k in self.models.keys():
-            if 'label' in k:
-                return self.models[k]

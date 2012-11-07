@@ -10,7 +10,7 @@ from    Events.BEventManager import *
 from    Graphics.BColors     import *
 import  Graphics.BDraw       as ns_draw
 
-from EngineCore import CONFIG
+from GameSource import CONFIG
 
 
 class BView(object):

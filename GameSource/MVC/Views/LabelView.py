@@ -17,7 +17,7 @@ class LabelView(object):
 
 
 	def Render(self):
-		if len(self.m['lines'][0]) != 0:
+		if len(self.m['lines']) != 0:
 			for i in range(len(self.m['lines'])):
 				pos = [self.m["pos"][0], self.m['pos'][1] + i * 50]
 				img = self.screen.blit( \

@@ -14,9 +14,10 @@ class Event(object):
 # Game State Events
 # ------------------------------------------------------------------------------
 class evTick(Event):
-    def __init__(self):
+    def __init__(self, tickCount):
         self.name = "Tick Event"
         self.log = False
+        self.tickCount = tickCount
 
 class evEnd(Event):
     def __init__(self):
@@ -91,3 +92,17 @@ class evAdvance(Event):
         self.name = "Advance Event"
         self.log = False
 
+class evRefresh(Event):
+    def __init__(self):
+        self.name = "Refresh Event"
+        self.log = False
+
+class evUpdatedLabel(Event):
+    def __init__(self):
+        self.name = "Updated Label Event"
+        self.log = False
+
+class evUpdatedInputbox(Event):
+    def __init__(self):
+        self.name = "Updated Inputbox Event"
+        self.log = False        

@@ -14,4 +14,12 @@ def GetRoot(up):
 # ==============================================================================
 MVC_ROOT_DIR = GetRoot(2)
 RESOURCE_DIR = MVC_ROOT_DIR + "GameSource/Resources/"
+SOUND_DIR = RESOURCE_DIR + "Sounds/"
 UBUNTU_FONT_DIR = RESOURCE_DIR + "ubuntu_font/"
+CONFIG_DIR = MVC_ROOT_DIR + "Config/"
+
+import json
+with open(CONFIG_DIR + "config.json") as f:
+	CONFIG = f.read()
+
+CONFIG = json.loads(CONFIG)

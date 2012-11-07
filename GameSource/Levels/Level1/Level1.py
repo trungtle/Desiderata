@@ -18,7 +18,9 @@ import MVC.BController      as ns_controller
 import MVC.BView            as ns_view
 import MVC.BModelManager    as ns_model_manager
 
-from   GameSource import RESOURCE_DIR
+from   GameSource import SOUND_DIR
+from   GameSource import CONFIG
+
 class Level(object):
     '''
     classdocs
@@ -45,15 +47,21 @@ class Level(object):
 
     
     def LoadModels(self):
-        s = ns_util.GetModel("label", "s")
-        self.modelManager.Add(s)
+        s = ns_util.GetModel("label", "p")
+        self.modelManager.Add(s, "p")
+
+        s = ns_util.GetModel("label", "b")
+        self.modelManager.Add(s, "b")
+
+        s = ns_util.GetModel("label", "h")
+        self.modelManager.Add(s, "h")
 
         inputbox = ns_util.GetModel("inputbox", "level1")
-        self.modelManager.Add(inputbox)
+        self.modelManager.Add(inputbox, "ib")
     
 
     def LoadResources(self):
-        pygame.mixer.music.load(RESOURCE_DIR + "Sounds/DanceOfTheShadows.wav")
+        pygame.mixer.music.load(SOUND_DIR + CONFIG["music"]["background"])
     
 
     def LevelUp(self):

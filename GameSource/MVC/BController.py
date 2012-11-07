@@ -31,6 +31,7 @@ class LevelSpinnerController(object):
 
         # Clock to manage how fast the screen updates
         self.clock = pygame.time.Clock()
+        self.tickCount = 0
 
 
     def Run(self):
@@ -39,8 +40,8 @@ class LevelSpinnerController(object):
         while self.states['run']:
 
             if not self.states['pause']:
-                self.clock.tick(60)
-                g_evManager.Post(evTick())
+                g_evManager.Post(evTick(self.tickCount))
+                self.tickCount += 1
 
 
     def Notify(self, event):

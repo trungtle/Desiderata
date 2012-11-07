@@ -22,7 +22,7 @@ class EventManager(object):
             
     def Post(self, event):
         if event.log:
-                logger.Print(event.name)
+            logger.Print(event.name)
                 
         for listener in self.listeners.keys():
             listener.Notify(event)

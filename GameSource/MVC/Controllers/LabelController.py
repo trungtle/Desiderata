@@ -13,52 +13,88 @@ class LabelController(object):
 		self.m = model
 		self.Refresh()
 
+
 	def Refresh(self):
+
+		# Reinitialize
+
+		self.done = False
 		self.curFrame = 0
 		self.curLen = 0
 		lineLen = self.m['line_len']
 
-		# Split string into
-		self.len = len(self.m['text'])
-		self.checkChar = self.m['text'][-1:0]
+		# These are used for checking if text is new
+		self.prevLen = len(self.m['text'])
+		self.preCheckChar = self.m['text'][:]
+
+		# Split string into multiple lines
 
 		tokens = self.m["text"].split()
 		self.lines = []
 		for i in range(0, len(tokens), lineLen):
 			self.lines.append(' '.join(tokens[i:i + lineLen]))
 
-		# Make empty lines to prepare for drawing
+		# Make empty lines to prepare for drawing in view
+
 		self.m['lines'] = ['']*len(self.lines)
 		self.lineCount = 0
 
+
 	def IsNewText(self):
-		return (self.len != len(self.m['text']) or
-				self.checkChar != self.m['text'][-1:0])
+		return (self.prevLen != len(self.m['text']) or
+				self.preCheckChar != self.m['text'][:])
+
 
 	def Notify(self, event):
-		if isinstance(event, evTick):
+		if isinstance(event, evRefresh):			
 
+			#
 			# Refresh if we have a new text
-			if (self.IsNewText()):
-				self.Refresh()
+			#
+			#if (self.IsNewText()) : self.Refresh()
+			self.Refresh()
 
-			# Count up to self.m["frames"] to update the next character
-			# to label
-			self.curFrame += 1
-			self.curFrame %= self.m["frames"]
-			if self.curFrame == 0:
+		elif isinstance(event, evTick):
 
-				# Do not update more if we have displayed all
+			if not self.done: self.curFrame += 1
+			
+			#
+			# Instant draw if there's no frames
+			#
+
+			if self.m['frames'] == 0:
+				self.m['lines'] = self.lines
+				if not self.done: g_evManager.Post(evUpdatedLabel())
+				self.done = True
+
+			#
+			# Only update on mutiples of self.m['frames']
+			#
+
+			elif self.curFrame % self.m["frames"] == 0:
+
+				# There is nothing to update
+				if len(self.lines) == 0 or self.m['text'] == '':
+					self.m['lines'] = []
+					if not self.done: g_evManager.Post(evUpdatedLabel())
+					self.done = True
 
 				# Update character
-				if self.curLen < len(self.lines[self.lineCount]):
+
+				elif self.curLen < len(self.lines[self.lineCount]):
 					self.curLen += 1
 					self.m['lines'][self.lineCount] = \
 								''.join(self.lines[self.lineCount][0:self.curLen])
 
 				# Update lines
-				else:
-					if (self.lineCount < len(self.lines) - 1):
+
+				elif (self.curLen == len(self.lines[self.lineCount])):
+					if(self.lineCount < len(self.lines) - 1):
 						self.lineCount += 1
 						self.curLen = 0
-				
+
+					# Finished update
+
+					else:
+						if not self.done: g_evManager.Post(evUpdatedLabel())
+						self.done = True

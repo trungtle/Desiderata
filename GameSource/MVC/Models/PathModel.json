@@ -1,65 +1,225 @@
 {
 	"knowledge":
 	{
-		"past":
+		"intro1": 
 		{
-			"intro": 
-			{
-				"id": ["past", "intro"],
-				"next": ["past", "wake"],
-				"max_word": 0
-			},
-			"wake":
-			{
-				"id": ["past", "wake"],
-				"next": ["past", "q1"],
-				"max_word": 0
-			},
-			"q1":
-			{
-				"id": ["past", "q1"],
-				"next": ["past", "strange"],
-				"max_word": 12,
-				"valid_ans": ["Yes", "No", "I don't know"]
-			},
-			"strange":
-			{
-				"id": ["past", "strange"],
-				"next": ["past", "kill"],
-				"max_word": 0
-			},
-			"kill":
-			{
-				"id": ["past", "kill"],
-				"next": ["past", "q2"],
-				"max_word": 0
-			},			
-			"q2":
-			{
-				"id": ["past", "q2"],
-				"next": ["past", "q3"],
-				"max_word": 7,
-				"valid_ans": ["Stephan", "Douglas", "Sergey", "Doug"]
-			},
-			"q3":
-			{
-				"id": ["past", "q3"],
-				"next": ["past", "death"],
-				"max_word": 12,
-				"valid_ans": ["Yes", "No", "I don't know"]
-			},
-			"death":
-			{
-				"id": ["past", "death"],
-				"next": ["past", "end"],
-				"max_word": 0
-			},
-			"end":
-			{
-				"id": ["past", "end"],
-				"next": null,
-				"max_word": 0
-			}
+			"next": ["intro2"]
+			,"ans_len": 0
 		}
+		,"intro2":
+		{
+			"next": ["1"]
+			,"ans_len": 0
+		}
+		,"1": 
+		{
+			"next": ["2"]
+			,"ans_len": 0
+		}
+		,"2": 
+		{
+			"next": ["3"]
+			,"ans_len": 0
+		}
+		,"3": 
+		{
+			"next": [""]
+			,"p_next": [["see_beast"], ["see_beast"], ["see_beast"]]
+			,"ans_len": 9
+			,"valid_ans": ["wake up", "wake", "open eyes"]
+		}
+		,"see_beast":
+		{
+			"next": ["4"]
+			,"ans_len": 0
+		}
+		,"4": 
+		{
+			"next": [""]
+			,"p_next": [["human"]]
+			,"ans_len": 5
+			,"valid_ans": ["'yes'"]
+		}
+		,"human": 
+		{
+			"next": [""]
+			,"p_next": [["h_leave1"], ["h_stay1"]]
+			,"valid_ans": ["leave", "stay"]
+			,"ans_len": 5
+		}
+		,"h1": 
+		{
+			"next": [""]
+			,"p_next": [["h_leave1"], ["h_stay1"]]
+			,"valid_ans": ["leave", "stay"]
+			,"ans_len": 5
+		}
+		,"h_stay1":
+		{
+			"next": ["h2"]
+			,"ans_len": 0
+		}
+		,"h_leave1":
+		{
+			"next": null
+			,"ans_len": 0
+		}
+		,"h2":
+		{
+			"next": ["h3"]
+			,"ans_len": 0
+		}
+		,"h3":
+		{
+			"next": ["personality"]
+			,"ans_len": 0
+		}
+		,"personality":
+		{
+			"next": [""]
+			,"p_next": [["thinker"], ["believer"]]
+			, "valid_ans": ["'thinker'", "'believer'"]
+			,"ans_len": 10
+		}
+		,"believer":
+		{
+			"next": ["h6"]
+			,"ans_len": 0
+		}
+		,"thinker":
+		{
+			"next": null
+			,"ans_len": 0
+		}
+		,"h6":
+		{
+			"next": ["h7"]
+			,"ans_len": 0
+		}
+		,"h7":
+		{
+			"next": ["h8"]
+			,"ans_len": 0
+		}
+		,"h8":
+		{
+			"next": ["request_to_guide"]
+			,"ans_len": 0
+		}
+		,"request_to_guide":
+		{
+			"next": ["h9"]
+			,"ans_len": 0
+		}
+		,"h9":
+		{
+			"next": ["h10"]
+			,"ans_len": 0
+		}
+		,"h10":
+		{
+			"next": [""]
+			,"p_next": [["h_name1"], ["h_no_name1"]]
+			,"valid_ans": ["'yes'", "'no'"]
+			,"ans_len": 5
+		}
+		,"h_name1":
+		{
+			"next": ["h_name2"]
+			,"ans_len": 0
+		}
+		,"h_name2":
+		{
+			"next": ["h_remove_name"]
+			,"ans_len": 0
+		}
+		,"h_remove_name": 
+		{
+			"next": ["h_name3"]
+			,"ans_len": 0
+		}
+		,"h_name3":
+		{
+			"next": ["h_name4"]
+			,"ans_len": 0
+		}
+		,"h_name4":
+		{
+			"next": ["h_name5"]
+			,"ans_len": 0
+		}
+		,"h_name5":
+		{
+			"next": ["h_name6"]
+			,"ans_len": 0
+		}
+		,"h_name6":
+		{
+			"next": ["h_name7"]
+			,"ans_len": 0
+		}
+		,"h_name7":
+		{
+			"next": ["h_name8"]
+			,"ans_len": 0
+		}
+		,"h_name8":
+		{
+			"next": ["h_name9"]
+			,"ans_len": 0
+		}
+		,"h_name9":
+		{
+			"next": [""]
+			,"p_next": [["h_name_poetry1"], ["h_name_no_poetry1"], ["h_name_what_poetry1"]]
+			,"ans_len": 13
+			,"valid_ans": ["'Yes'", "'No'", "'What is it?'"]
+		}
+		,"h_name_poetry1":
+		{
+			"next": ["h_name10"]
+			,"ans_len": 0
+		}
+		,"h_name_no_poetry1":
+		{
+			"next": ["h_name10"]
+			,"ans_len": 0
+		}
+		,"h_name_what_poetry1":
+		{
+			"next": ["h_name_what_poetry2"]
+			,"ans_len": 0
+		}
+		,"h_name_what_poetry2":
+		{
+			"next": ["h_name10"]
+			,"ans_len": 0
+		}
+		,"h_name10":
+		{
+			"next": ["h_name11"]
+			,"ans_len": 0
+		}
+		,"h_name11":
+		{
+			"next": ["h_name12"]
+			,"ans_len": 0
+		}
+		,"h_name12":
+		{
+			"next": ["h_name13"]
+			,"ans_len": 0
+		}
+		,"h_no_name1":
+		{
+			"next": null
+			,"ans_len": 0
+		}
+		,"non_human": 
+		{
+			"next": null
+			,"ans_len": 0
+		}
+
 	}
 }

@@ -1,34 +1,181 @@
 {
 	"knowledge":
 	{
-		"past":
+		"intro1":
 		{
-			"title": "The past",
-			"intro": "The leaves were rustling heavily in the dark night. A deep blue moon was high beyond branches, leaving fading trails on the road. Silent night...",
-			"wake": "\"Wake up... wake up.\"",
-			"q1": "\"Are you hurt?\"",
-			"strange": "\"This is quite strange, I have never seen a human traveling on this road before...\"",
-			"kill": "\"I'm afraid that you have to die. As a guardian of the this forest road, I protect this place from unwanted intruders and ensure that no one knows about it. There is a reason I have never seen a human brave enough to come here before...\"",
-			"q2": "\"What is your name?\"",
-			"q3": "\"Do you have any last words?\"",
-			"death": "The heavy evening breeze felt uneasy as a cutting sound through the air broke the silence. A few seconds passed in stillness, and it was all gone... The night is cold, very cold.",
-			"end": "(To be continue...)"
-		},
-		"present":
+			"p": "Wrap your answer around single quotes to speak. Without the single quotes, you will perform an action."
+		}
+		,"intro2":
 		{
-
-		},
-		"future":
+			"p":"As a wish for the faithful, may your journey begin without mistrust. As an advice for the wise, remember who you are."
+		}
+		,"1":
 		{
-
-		},
-		"judgement":
+			"p": "There it goes..."
+		}
+		,"2":
 		{
-
-		},
-		"resolution":
+			"p": "On a dark cold night of summer, in a black forest. A deep, growly voice broke the silence..."
+		}
+		,"3":
 		{
-
+			"b": "Grr...Wake. Wake."
+		}
+		,"see_beast":
+		{
+			"p": "The voice woke you up from a long night rest. Not too far from here was the forest road that you were traveling on. You looked up, and figure of a heavy beast slowly gained details in your sight. He had a lion head and a giant stature. The beast was grumpy."
+		}
+		,"4":
+		{
+			"b": "Grr... awake eh? What are you, a human?"
+		}
+		,"human":
+		{
+			"b": "Human...I heard of them. Scums. Parasites. Grr... You have no business here. Leave now."
+		}
+		,"h1":
+		{
+			"b": "You should leave now."
+		}
+		,"h_stay1":
+		{
+			"h": "I came here for a reason."
+		}
+		,"h_leave1":
+		{
+			"b": "That's what I thought. Grrr... Good bye human, this place is not safe for you."
+		}
+		,"h2":
+		{
+			"b": "A reason? Grr.. of course... And what might that be?"
+		}
+		,"h3":
+		{
+			"h": "My village is sick. I am looking for help."
+		}
+		,"personality":
+		{
+			"b": "Kingdom in the north has fallen. The trees are anxious and predators are on the hunt... Grr, tell me, are you a thinker or a believer?"
+		}
+		,"believer":
+		{
+			"h": "I am a humble believer, seeking a wish from the Gate of Faith. A journey I must press on to save my people."
+		}
+		,"thinker":
+		{
+			"p": "Apology for the unfinished story for the wise. It shall be finished in the near future."
+		}
+		,"h6":
+		{
+			"b": "The road is long and treacherous. Those who seeks help from the Gate of Faith are lost ones. Grr... you are no exception."
+		}
+		,"h7":
+		{
+			"p": "You looked around and saw a symbol of guidance on the beast's right leg. Symbols of guidance are birth marks carried by a rare league of beasts who were born to lead travelers to the seven ancient Gates. They are mysterious creatures with no affiliation. The Solitary, as the ancient named."
+		}
+		,"h8":
+		{
+			"p": "Legends force rules upon the guide league to take travelers on the right path, but with one condition: The beast shall claim a token from that traveler for his service." 
+		}
+		,"request_to_guide":
+		{
+			"h": "A road guide, as the birthmark shows. I need help and I am willing to give up a token for your help."
+		}
+		,"h9":
+		{
+			"b": "Grr... human, no one travels this road anymore. No one. The world doesn't need faith. It has drained up all the power and wealth that it needed. That is why those Gates are damn closed. The human minds... Grr... the predators know..."
+		}
+		,"h10":
+		{
+			"b": "Tell me scum. Do you have a name?"
+		}
+		,"h_name1":
+		{
+			"h": "It's Oliph."
+		}
+		,"h_name2":
+		{
+			"b": "As I expected. Grr...human, too easy to trust. Too slow to learn. The rule forbids me to refuse a request to guide, but it also forbids a traveler to refuse to give up his token. Grr... your life is mine. A scum with no name... pathetic."
+		}
+		,"h_remove_name":
+		{
+			"p": "The beast eyes turned to flames, and the flames burned through your memory. Your name is gone."
+		}
+		,"h_name3":
+		{
+			"b": "Let's get on the road. Grr... our deal is bounded. You will be guided to the Gate of Faith. May the wish stays true." 
+		}
+		,"h_name4":
+		{
+			"p": "The lion beast led on, taking you on the road. It was a winding and muddy road, taking all its travellers deeper and deeper into the black forest. You felt a chill as if something was missing. What was it? You couldn't remember..."
+		}
+		,"h_name5":
+		{
+			"p": "You ignored that feeling and kept pressing on. After all, saving your village was what you needed to think about..."
+		}
+		,"h_name6":
+		{
+			"p": "The road disappeared after the first day of traveling and turned into tangled, twisted treelines. It was so dark in there, with the trees so tall and the sun and moon far away, their lights trapped above the branches. Creatures of black forest crept uneasily... 'The predators are on the hunt', you remembered the lion beast said..."
+		}
+		,"h_name7":
+		{
+			"p": "The second day came. The forest started pouring rain from above. You were soaked and cold, but your spirit was strong. The beast never mentioned a word but guided in silence, choosing his footsteps carefully and many times revealed secret paths that was well hidden. Without a doubt, you trusted him to take you to the right place. You tried to make  conversation, but your presence were ignored..."
+		}
+		,"h_name8":
+		{
+			"p": "On the third day, the rain stopped. You felt extremely tired but fortunately there were plenty of fruits and spring water in the forest for both you and the beast to survive hunger and thirst. The grumpy voice broke the silence for the first time since the journey started..."
+		}
+		,"h_name9":
+		{
+			"b": "Grr... say, human scum, your race has poetry?"
+		}
+		,"h_name_poetry1":
+		{
+			"h": "It's a rare thing you see nowdays. But our race made beautiful verses that lasted through centuries. The songs were made by many poets."
+		}
+		,"h_name_no_poetry1":
+		{
+			"h": "Where we are from poetry has been dead thousands of years ago. I have learned about its aesthetic qualities, but unfortunately there is none remained. Lion beast, do you have one in mind?"
+		}
+		,"h_name_what_poetry1":
+		{
+			"h": "What is it?"
+		}
+		,"h_name_what_poetry2":
+		{
+			"b": "Poetry is a form of literary art which uses the aesthetic qualities of language to evoke meanings... Grr... feel smarter now eh..."
+		}
+		,"h_name10":
+		{
+			"b": "Here is my favourite... eh... I never had anyone to talked to for the last century, not since the fall of the Oblivion Gate... grr"
+		}
+		,"h_name11":
+		{
+			"b": "\"Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender be on good terms with all persons.\""
+		}
+		,"h_name12":
+		{
+			"b": "Human, what you are seeking for... It is potent. Not all could reach there without first proved they are worthy of it."
+		}
+		,"h_name13":
+		{
+			"h": "Those who don't try never succeed, for that the only way to fail is in yourself."
+		}
+		,"h_name14":
+		{
+			"p": "The beast stopped walking. When he turned around, his eyes turn burning red, and a hot stream of air was radiating from the beast's body. He spoke..."
+		}
+		,"h_the_rule":
+		{
+			"b": "From then on in our journey, it will be a test eh... "
+		}
+		,"h_no_name1":
+		{
+			"h": "Scum is good enough."
+		}
+		,"non_human":
+		{
+			"b" : "Some unknown creatue of sickness. Interesting... Grr..."
 		}
 	},
 	"power":

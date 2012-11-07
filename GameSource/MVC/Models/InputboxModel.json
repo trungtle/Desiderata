@@ -9,7 +9,7 @@
 	"level1":
 	{
 		"name": "inputbox",
-		"pos": [50,400],
+		"pos": [50,450],
 		"size": [100,50],
 		"max_word": 0,
 		"font_size": 32,
