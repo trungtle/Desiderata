@@ -153,9 +153,41 @@
 		{
 			"p": "The rain started pouring again, and the road swole up with mud pools..."
 		}
+		,"pie_game":
+		{
+			"b": "Well, I am hungry. Grr... Let's play a 'pie game' eh? But with our figment imagination. A simple game of cutting pie, and you always want the bigger piece, isn't it..."
+		}
 		,"q3":
 		{
-			"p": "There is no question 3 yet..."
+			"b": "We both want to eat the pie, and a fair way for us to share this imaginary pie, is to decide who cuts the pie and who chooses which slice. Even though the pie is imaginary, let's be a little more realistic. Let's keep in mind that no one is perfect and can carry out our action *precisely*. Human, do you want to cut the pie or to choose the slice?"
+		}
+		,"a3":
+		{
+			"h": "I will $$$."
+		}
+		,"beast_react3":
+		{
+			"b": "Grr.. This is the last question for now. The moon is high, and the forest is anxious. We will take a break here."
+		}
+		,"sleep1":
+		{
+			"p": "You felt tired, and sat down on the muddy ground. Under the tree, it was hard for the rain to fall through so it wasn't so bad. As you were lying down, you saw the beast figure slowly fading away. 'Tomorrow will be a long day', you thought. Sleep came fast, and silence took over..."
+		}
+		,"outro1":
+		{
+			"p": "Thank you for playing, although this is an unfinished work, I wanted to explore a new direction in Q&A game, where the back-story is as meaningful as the questions asked."
+		}
+		,"outro2":
+		{
+			"p": "The game was inspired by a poem named Desiderata by Max Ehrmann, which was the first quote your read in the beginning intro. Here is the ending of the poem, \"...With all its sham, drudgery and broken dreams, it is still a beautiful world. Be careful. Strive to be happy.\""
+		}
+		,"outro3":
+		{
+			"p": "May your journey in life begins without mistrust..."
+		}
+		,"credit":
+		{
+			"p": "CREDIT : Music , 'Dance Of The Shadows' by zero-project - http://zero-project.gr/ Developer , trle"
 		}
 		,"poetry":
 		{

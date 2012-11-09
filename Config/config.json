@@ -23,9 +23,10 @@
 	},
 	"initial":
 	{
-		"checkPoint": "4",
+		"checkPoint": "credit",
 		"isThinker": false
 		,"a1": "random"
 		,"a2": "tail"
+		,"a3": "choose the slice"
 	}
 }

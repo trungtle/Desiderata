@@ -207,8 +207,45 @@
 		}
 		,"q3":
 		{
-			"next": null
+			"next": [""]
+			,"p_next": [["a3"], ["a3"]]
+			,"ans_len": 18
+			,"valid_ans": ["'cut the pie'", "'choose the slice'"]
+		}
+		,"a3":
+		{
+			"next": ["beast_react3"]
 			,"ans_len": 0
+		}
+		,"beast_react3":
+		{
+			"next": ["sleep1"]
+			,"ans_len": 0
+		}
+		,"sleep1":
+		{
+			"next": ["outro1"]
+			,"ans_len": 0			
+		}
+		,"outro1":
+		{
+			"next": ["outro2"]
+			,"ans_len": 0			
+		}
+		,"outro2":
+		{
+			"next": ["outro3"]
+			,"ans_len": 0			
+		}
+		,"outro3":
+		{
+			"next": ["credit"]
+			,"ans_len": 0			
+		}
+		,"credit":
+		{
+			"next": null
+			,"ans_len": 0			
 		}
 		,"poetry":
 		{

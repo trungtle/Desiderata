@@ -148,7 +148,7 @@ class Path1(Simulator):
             self.vars = ['Knowledge']
             self.isThinker = 1
 
-        elif self.next[0] == "a1" or self.next[0] == 'a2':
+        elif self.next[0] == "a1" or self.next[0] == 'a2' or self.next[0] == 'a3':
             #
             # Trim out quote
             #
@@ -158,8 +158,10 @@ class Path1(Simulator):
 
             if self.next[0] == 'a1':
                 self.a1 = trimmedAns
-            else:
+            elif self.next[0] == 'a2':
                 self.a2 = trimmedAns
+            elif self.next[0] == 'a3':
+                self.a3 = trimmedAns
 
     def Refresh(self):
 
