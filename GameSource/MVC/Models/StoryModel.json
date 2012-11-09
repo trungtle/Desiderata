@@ -123,7 +123,7 @@
 		}
 		,"matching_game":
 		{
-			"b": "This is called the 'Matching Game'. We will not play it, but the game is meant to test your mind. Imagine that each of us had a coin. The objective is to match or not match head or tail with your opponent. Players are not allowed to communicate and we both present the coins simutaneously. The winner takes the coin from the loser. Grr... take note on this."
+			"b": "This is called the 'Matching Game'. We will not play it, but the game is meant to test your mind. Imagine that each of us had a coin. The objective is to match or not match head or tail with your opponent. Players are not allowed to communicate and we both present the coins at the same time. The winner takes the coin from the loser. Grr... take note on this."
 		}
 		,"take_note1":
 		{
@@ -176,6 +176,10 @@
 		,"ending":
 		{
 			"p": "$$$"
+		}
+		,"the_end":
+		{
+			"p": "THE END"
 		}
 		,"outro1":
 		{

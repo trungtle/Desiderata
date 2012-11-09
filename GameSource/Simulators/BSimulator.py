@@ -88,6 +88,8 @@ class Path1(Simulator):
         self.isThinker = CONFIG["initial"]["isThinker"]
         self.a1 = CONFIG["initial"]["a1"]
         self.a2 = CONFIG["initial"]["a2"]
+        self.a3 = CONFIG["initial"]["a3"]
+        self.hasName = CONFIG["initial"]["hasName"]
 
         self.Refresh()
 
@@ -142,11 +144,17 @@ class Path1(Simulator):
 
         if self.next[0] == "believer":
             self.vars = ['Faith']
-            self.isThinker = 0
+            self.isThinker = False
 
         elif self.next[0] == "thinker":
             self.vars = ['Knowledge']
-            self.isThinker = 1
+            self.isThinker = True
+
+        elif self.next[0] == "h_no_name1":
+            self.hasName = False
+
+        elif self.next[0] == "h_name1":
+            self.hasName = True
 
         elif self.next[0] == "a1" or self.next[0] == 'a2' or self.next[0] == 'a3':
             #
@@ -162,6 +170,24 @@ class Path1(Simulator):
                 self.a2 = trimmedAns
             elif self.next[0] == 'a3':
                 self.a3 = trimmedAns
+
+        elif self.next[0] == "ending":
+
+            if self.a1 == 'random' and \
+                (self.a2 == 'tails' or self.a2 == 'always tail') and \
+                self.a3 == 'choose the slice':
+
+                if (self.isThinker and self.hasName) or (not self.isThinker and not self.hasName):
+                    self.vars = ["The beast looked at you sleeping. The forest stired quietly like a child. The rain stopped. As the beast smiled, he knew you have passed the first test..."]
+
+                else:
+                    if self.isThinker and not self.hasName:
+                        self.vars = ["The beast looked at you sleeping. He was in disapproval, as for a thinker like you to willingly give up your name without hesitance. You needed to be more careful. Without a sound, the beast silently walked away. The chill overwhelming took over the forest. The road to the Gate is closed..."]
+                    if not self.isThinker and self.hasName:
+                        self.vars = ["The beast looked at you sleeping. He was in disapproval, as for a believer like you to not be trusting him enough to share your real name. The Gate does not give answers to those without Faith. Without a sound, the beast silently walked away. The chill overwhelming took over the forest. The road to the Gate is closed..."]
+            else:
+                self.vars = ["The beast looked at you sleeping, then without a sound, he silently walked away. He knew you didn't have the answers. The chill overwhelming took over the forest. The road to the Gate is closed..."]
+
 
     def Refresh(self):
 

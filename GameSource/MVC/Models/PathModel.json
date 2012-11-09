@@ -224,8 +224,18 @@
 		}
 		,"sleep1":
 		{
-			"next": ["outro1"]
+			"next": ["ending"]
 			,"ans_len": 0			
+		}
+		,"ending":
+		{
+			"next": ["the_end"]
+			,"ans_len": 0						
+		}
+		,"the_end":
+		{
+			"next": ["outro1"]
+			,"ans_len": 0						
 		}
 		,"outro1":
 		{
