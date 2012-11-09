@@ -1,5 +1,5 @@
 {
-	"knowledge":
+	"layer1":
 	{
 		"intro1":
 		{
@@ -7,7 +7,11 @@
 		}
 		,"intro2":
 		{
-			"p":"As a wish for the faithful, may your journey begin without mistrust. As an advice for the wise, remember who you are."
+			"p":"\"Go placidly amid the noise and haste, and remember what peace there may be in silence. As far as possible without surrender, be on good terms with all persons...\""
+		}
+		,"intro3":
+		{
+			"p": "\"Speak your truth quietly and clearly; and listen to others, even the dull and ignorant; they too have their story...\""
 		}
 		,"1":
 		{
@@ -23,7 +27,7 @@
 		}
 		,"see_beast":
 		{
-			"p": "The voice woke you up from a long night rest. Not too far from here was the forest road that you were traveling on. You looked up, and figure of a heavy beast slowly gained details in your sight. He had a lion head and a giant stature. The beast was grumpy."
+			"p": "The voice woke you up from a long night rest. Not too far from here was the forest road that you were traveling on. You looked up, and figure of a heavy beast slowly gained details in your sight. It was a giant lion beast. The beast was grumpy."
 		}
 		,"4":
 		{
@@ -33,10 +37,6 @@
 		{
 			"b": "Human...I heard of them. Scums. Parasites. Grr... You have no business here. Leave now."
 		}
-		,"h1":
-		{
-			"b": "You should leave now."
-		}
 		,"h_stay1":
 		{
 			"h": "I came here for a reason."
@@ -45,17 +45,21 @@
 		{
 			"b": "That's what I thought. Grrr... Good bye human, this place is not safe for you."
 		}
+		,"leave2":
+		{
+			"p": "You turned around and ran away, crying like a little baby. The game is over, and your spirit is forever gone."
+		}
 		,"h2":
 		{
 			"b": "A reason? Grr.. of course... And what might that be?"
 		}
 		,"h3":
 		{
-			"h": "My village is sick. I am looking for help."
+			"h": "My village is sick. I am looking for help at the ancient Gates."
 		}
 		,"personality":
 		{
-			"b": "Kingdom in the north has fallen. The trees are anxious and predators are on the hunt... Grr, tell me, are you a thinker or a believer?"
+			"b": "Grr... I am guarding the path to the ancient Gates. Tell me, are you a thinker or a believer?"
 		}
 		,"believer":
 		{
@@ -63,87 +67,107 @@
 		}
 		,"thinker":
 		{
-			"p": "Apology for the unfinished story for the wise. It shall be finished in the near future."
+			"h": "Wisdom guides us through hardship. I believe our curiousity has an infinite depth."
 		}
-		,"h6":
+		,"discourage":
 		{
-			"b": "The road is long and treacherous. Those who seeks help from the Gate of Faith are lost ones. Grr... you are no exception."
+			"b": "The road is long and treacherous. Those who seeks help from the Gate of $$$ are lost ones. Grr..."
 		}
-		,"h7":
+		,"guidance_symbol":
 		{
-			"p": "You looked around and saw a symbol of guidance on the beast's right leg. Symbols of guidance are birth marks carried by a rare league of beasts who were born to lead travelers to the seven ancient Gates. They are mysterious creatures with no affiliation. The Solitary, as the ancient named."
-		}
-		,"h8":
-		{
-			"p": "Legends force rules upon the guide league to take travelers on the right path, but with one condition: The beast shall claim a token from that traveler for his service." 
+			"p": "You saw a symbol of Guidance on the beast chest. It is a birth mark carried by those who were born with duty to take travelers to the ancient Gates. Only with one condition: the traveler has to give up a token for the service."
 		}
 		,"request_to_guide":
 		{
-			"h": "A road guide, as the birthmark shows. I need help and I am willing to give up a token for your help."
+			"h": "I will pay you a token at your service, lion beast."
 		}
-		,"h9":
+		,"request_token":
 		{
-			"b": "Grr... human, no one travels this road anymore. No one. The world doesn't need faith. It has drained up all the power and wealth that it needed. That is why those Gates are damn closed. The human minds... Grr... the predators know..."
-		}
-		,"h10":
-		{
-			"b": "Tell me scum. Do you have a name?"
+			"b": "Grr... human, this world doesn't need $$$ anymore... Do you have a name?"
 		}
 		,"h_name1":
 		{
 			"h": "It's Oliph."
 		}
-		,"h_name2":
+		,"take_name":
 		{
-			"b": "As I expected. Grr...human, too easy to trust. Too slow to learn. The rule forbids me to refuse a request to guide, but it also forbids a traveler to refuse to give up his token. Grr... your life is mine. A scum with no name... pathetic."
+			"b": "Little human, I will take it as a token."
 		}
 		,"h_remove_name":
 		{
-			"p": "The beast eyes turned to flames, and the flames burned through your memory. Your name is gone."
+			"p": "The beast eyes turned to flames, and the flames burned through your memory. Your name is gone and you were at lost."
 		}
-		,"h_name3":
+		,"begin_journey":
 		{
-			"b": "Let's get on the road. Grr... our deal is bounded. You will be guided to the Gate of Faith. May the wish stays true." 
+			"b": "Let's get on the road. Grr... our deal is bounded. You will be guided to the Gate of $$$." 
 		}
 		,"h_name4":
 		{
-			"p": "The lion beast led on, taking you on the road. It was a winding and muddy road, taking all its travellers deeper and deeper into the black forest. You felt a chill as if something was missing. What was it? You couldn't remember..."
+			"p": "The lion beast led on, taking you on the road. It was a winding and muddy road, taking all its travellers deeper and deeper into the black forest. The beast never mentioned a word but guided in silence, choosing his footsteps carefully and many times revealed secret paths that was well hidden. Without a doubt, you trusted him."
 		}
 		,"h_name5":
 		{
-			"p": "You ignored that feeling and kept pressing on. After all, saving your village was what you needed to think about..."
+			"p": "After the first night, the beast spoke:"
 		}
-		,"h_name6":
+		,"test_introduced":
 		{
-			"p": "The road disappeared after the first day of traveling and turned into tangled, twisted treelines. It was so dark in there, with the trees so tall and the sun and moon far away, their lights trapped above the branches. Creatures of black forest crept uneasily... 'The predators are on the hunt', you remembered the lion beast said..."
+			"b": "Human, what you are seeking for... It is potent. Grr... I will test your mind with a little game. I will ask you a series of questions, and each has an answer that I am looking for. You will not know the correct answers until we have reached the gate. Prove me your $$$, human."
 		}
 		,"h_name7":
 		{
-			"p": "The second day came. The forest started pouring rain from above. You were soaked and cold, but your spirit was strong. The beast never mentioned a word but guided in silence, choosing his footsteps carefully and many times revealed secret paths that was well hidden. Without a doubt, you trusted him to take you to the right place. You tried to make  conversation, but your presence were ignored..."
+			"p": "You were wet from the rain and cold from the chill breeze, but your spirit was strong. You were ready for the test."
 		}
-		,"h_name8":
+		,"begin_test":
 		{
-			"p": "On the third day, the rain stopped. You felt extremely tired but fortunately there were plenty of fruits and spring water in the forest for both you and the beast to survive hunger and thirst. The grumpy voice broke the silence for the first time since the journey started..."
+			"p": "The beast paused. You could hear the rustling leaves in the forest around you. The air was heavy."
 		}
-		,"h_name9":
+		,"matching_game":
 		{
-			"b": "Grr... say, human scum, your race has poetry?"
+			"b": "This is called the 'Matching Game'. We will not play it, but the game is meant to test your mind. Imagine that each of us had a coin. The objective is to match or not match head or tail with your opponent. Players are not allowed to communicate and we both present the coins simutaneously. The winner takes the coin from the loser. Grr... take note on this."
+		}
+		,"take_note1":
+		{
+			"p": "You paused to take note..."
+		}
+		,"q1":
+		{
+			"b": "Here is the first question, if we both matched heads or tails, I lose my coin to you. If we did not match, I take your coin. What is your best strategy to win this game? Random, always head, or always tail?"
+		}
+		,"a1":
+		{
+			"h": "$$$ is my answer."
+		}
+		,"beast_react1":
+		{
+			"p": "The beast smirked, but kept on walking..."
+		}
+		,"q2":
+		{
+			"b": "That was an easy one eh? Second question, but with a slight flavor of unbalance. If we did not match, I take your coin. If we match tails, I lose my coin to you, BUT, this is important, if we match heads, I lose my coin and A THOUSAND more to you. The odds is your favor, human. How do you want to play this?"
+		}
+		,"a2":
+		{
+			"h": "For this one, it has to be $$$."
+		}
+		,"beast_react2":
+		{
+			"p": "The rain started pouring again, and the road swole up with mud pools..."
+		}
+		,"q3":
+		{
+			"p": "There is no question 3 yet..."
+		}
+		,"poetry":
+		{
+			"b": "Grr... say, human, your race has poetry?"
 		}
 		,"h_name_poetry1":
 		{
-			"h": "It's a rare thing you see nowdays. But our race made beautiful verses that lasted through centuries. The songs were made by many poets."
+			"h": "It's a rare thing you see nowdays. But our race made beautiful verses that lasted through centuries."
 		}
 		,"h_name_no_poetry1":
 		{
-			"h": "Where we are from poetry has been dead thousands of years ago. I have learned about its aesthetic qualities, but unfortunately there is none remained. Lion beast, do you have one in mind?"
-		}
-		,"h_name_what_poetry1":
-		{
-			"h": "What is it?"
-		}
-		,"h_name_what_poetry2":
-		{
-			"b": "Poetry is a form of literary art which uses the aesthetic qualities of language to evoke meanings... Grr... feel smarter now eh..."
+			"h": "Where we are from poetry has been dead thousands of years ago."
 		}
 		,"h_name10":
 		{
@@ -171,7 +195,15 @@
 		}
 		,"h_no_name1":
 		{
-			"h": "Scum is good enough."
+			"h": "I was born without name. We honor action over reputation."
+		}
+		,"h_no_name2":
+		{
+			"b": "I shall take gold as a payment."
+		}
+		,"take_gold":
+		{
+			"p": "You handed the piece your only gold sack."
 		}
 		,"non_human":
 		{

@@ -1,5 +1,5 @@
 {
-	"knowledge":
+	"layer1":
 	{
 		"intro1": 
 		{
@@ -7,6 +7,11 @@
 			,"ans_len": 0
 		}
 		,"intro2":
+		{
+			"next": ["intro3"]
+			,"ans_len": 0
+		}
+		,"intro3":
 		{
 			"next": ["1"]
 			,"ans_len": 0
@@ -47,13 +52,6 @@
 			,"valid_ans": ["leave", "stay"]
 			,"ans_len": 5
 		}
-		,"h1": 
-		{
-			"next": [""]
-			,"p_next": [["h_leave1"], ["h_stay1"]]
-			,"valid_ans": ["leave", "stay"]
-			,"ans_len": 5
-		}
 		,"h_stay1":
 		{
 			"next": ["h2"]
@@ -61,8 +59,13 @@
 		}
 		,"h_leave1":
 		{
-			"next": null
+			"next": ["leave2"]
 			,"ans_len": 0
+		}
+		,"leave2":
+		{
+			"next": null
+			,"ans_len": 0			
 		}
 		,"h2":
 		{
@@ -83,40 +86,30 @@
 		}
 		,"believer":
 		{
-			"next": ["h6"]
+			"next": ["discourage"]
 			,"ans_len": 0
 		}
 		,"thinker":
 		{
-			"next": null
+			"next": ["discourage"]
 			,"ans_len": 0
 		}
-		,"h6":
+		,"discourage":
 		{
-			"next": ["h7"]
+			"next": ["guidance_symbol"]
 			,"ans_len": 0
 		}
-		,"h7":
-		{
-			"next": ["h8"]
-			,"ans_len": 0
-		}
-		,"h8":
+		,"guidance_symbol":
 		{
 			"next": ["request_to_guide"]
 			,"ans_len": 0
 		}
 		,"request_to_guide":
 		{
-			"next": ["h9"]
+			"next": ["request_token"]
 			,"ans_len": 0
 		}
-		,"h9":
-		{
-			"next": ["h10"]
-			,"ans_len": 0
-		}
-		,"h10":
+		,"request_token":
 		{
 			"next": [""]
 			,"p_next": [["h_name1"], ["h_no_name1"]]
@@ -125,20 +118,20 @@
 		}
 		,"h_name1":
 		{
-			"next": ["h_name2"]
+			"next": ["take_name"]
 			,"ans_len": 0
 		}
-		,"h_name2":
+		,"take_name":
 		{
 			"next": ["h_remove_name"]
 			,"ans_len": 0
 		}
 		,"h_remove_name": 
 		{
-			"next": ["h_name3"]
+			"next": ["begin_journey"]
 			,"ans_len": 0
 		}
-		,"h_name3":
+		,"begin_journey":
 		{
 			"next": ["h_name4"]
 			,"ans_len": 0
@@ -150,30 +143,79 @@
 		}
 		,"h_name5":
 		{
-			"next": ["h_name6"]
+			"next": ["test_introduced"]
 			,"ans_len": 0
 		}
-		,"h_name6":
+		,"test_introduced":
 		{
 			"next": ["h_name7"]
 			,"ans_len": 0
 		}
 		,"h_name7":
 		{
-			"next": ["h_name8"]
+			"next": ["begin_test"]
 			,"ans_len": 0
 		}
-		,"h_name8":
+		,"begin_test":
 		{
-			"next": ["h_name9"]
+			"next": ["matching_game"]
 			,"ans_len": 0
 		}
-		,"h_name9":
+		,"matching_game":
+		{
+			"next": ["take_note1"]
+			,"ans_len": 0
+		}
+		,"take_note1":
+		{
+			"next": ["q1"]
+			,"ans_len": 0
+		}
+		,"q1":
 		{
 			"next": [""]
-			,"p_next": [["h_name_poetry1"], ["h_name_no_poetry1"], ["h_name_what_poetry1"]]
+			,"p_next": [["a1"],["a1"],["a1"],["a1"],["a1"]]
+			,"valid_ans": ["'random'", "'heads'", "'always head'", "'tails'", "'always tail'"]
 			,"ans_len": 13
-			,"valid_ans": ["'Yes'", "'No'", "'What is it?'"]
+		}
+		,"a1":
+		{
+			"next": ["beast_react1"]
+			,"ans_len": 0
+		}
+		,"beast_react1":
+		{
+			"next": ["q2"]
+			,"ans_len": 0
+		}
+		,"q2":
+		{
+			"next": [""]
+			,"p_next": [["a2"],["a2"],["a2"],["a2"],["a2"]]
+			,"valid_ans": ["'random'", "'heads'", "'always head'", "'tails'", "'always tail'"]
+			,"ans_len": 13
+		}
+		,"a2":
+		{
+			"next": ["beast_react2"]
+			,"ans_len": 0
+		}
+		,"beast_react2":
+		{
+			"next": ["q3"]
+			,"ans_len": 0
+		}
+		,"q3":
+		{
+			"next": null
+			,"ans_len": 0
+		}
+		,"poetry":
+		{
+			"next": [""]
+			,"p_next": [["h_name_poetry1"], ["h_name_no_poetry1"]]
+			,"ans_len": 5
+			,"valid_ans": ["'Yes'", "'No'"]
 		}
 		,"h_name_poetry1":
 		{
@@ -212,8 +254,18 @@
 		}
 		,"h_no_name1":
 		{
-			"next": null
+			"next": ["h_no_name2"]
 			,"ans_len": 0
+		}
+		,"h_no_name2":
+		{
+			"next": ["take_gold"]
+			,"ans_len": 0
+		}
+		,"take_gold":
+		{
+			"next": ["begin_journey"]
+			,"ans_len": 0			
 		}
 		,"non_human": 
 		{

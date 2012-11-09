@@ -11,41 +11,41 @@
 		"name": "label",
 		"pos": [100,150],
 		"size": [100,50],
-		"font_size": 32,
+		"font_size": 26,
 		"text": "Desiderata",
 		"border": 1,
 		"font": "Ubuntu-L.ttf",
 		"padding": [10, 10, 10, 10],
 		"font_color": [10, 10, 10],
 		"frames": 1,
-		"line_len": 10
+		"line_len": 12
 	},
 	"b":
 	{
 		"name": "label",
 		"pos": [100,150],
 		"size": [100,50],
-		"font_size": 32,
+		"font_size": 26,
 		"text": "",
 		"border": 1,
 		"font": "Ubuntu-L.ttf",
 		"padding": [10, 10, 10, 10],
 		"font_color": [50, 100, 100],
 		"frames": 1,
-		"line_len": 10
+		"line_len": 12
 	},
 	"h":
 	{
 		"name": "label",
 		"pos": [100,400],
 		"size": [100,50],
-		"font_size": 32,
+		"font_size": 26,
 		"text": "",
 		"border": 1,
 		"font": "Ubuntu-L.ttf",
 		"padding": [10, 10, 10, 10],
 		"font_color": [130, 30, 20],
 		"frames": 1,
-		"line_len": 10
+		"line_len": 12
 	}
 }

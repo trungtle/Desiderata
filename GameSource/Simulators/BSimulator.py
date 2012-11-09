@@ -43,7 +43,7 @@ class Simulator(object):
 
     def BeginPath(self, choice):
         if choice == 0:
-            self.choice = KnowledgePath(self.modelManager)
+            self.choice = Path1(self.modelManager)
 
 
     def Notify(self, event):
@@ -59,20 +59,20 @@ class Simulator(object):
                 self.ready = True
 
 
-class KnowledgePath(Simulator):
+class Path1(Simulator):
     def __init__(self, modelManager):
 
         g_evManager.RegisterListener(self)
         self.modelManager   = modelManager
 
         # Set up initial start in storyline
-        self.story = ns_util.GetModel("Story", "knowledge")
-        self.path = ns_util.GetModel("Path", "knowledge") 
+        self.story = ns_util.GetModel("Story", "layer1")
+        self.path = ns_util.GetModel("Path", "layer1") 
         
-        self.curPath = self.GetNode(self.path, ('intro1',))
+        self.curPath = GetNode(self.path, (CONFIG["initial"]["checkPoint"],))
         self.curStory = {}
         for k in ('p', 'b', 'h'):
-            self.curStory[k] = self.GetNode(self.story, ('intro1', k))
+            self.curStory[k] = GetNode(self.story, (CONFIG["initial"]["checkPoint"], k))
 
         # Retrieve inputbox
         self.inputbox = self.modelManager.Get('ib')
@@ -84,73 +84,12 @@ class KnowledgePath(Simulator):
 
         self.ans = ['']
         self.vars = ['']
+        self.next = ('',)
+        self.isThinker = CONFIG["initial"]["isThinker"]
+        self.a1 = CONFIG["initial"]["a1"]
+        self.a2 = CONFIG["initial"]["a2"]
 
         self.Refresh()
-
-
-    def Refresh(self):
-
-        # Re-init
-
-        self.labelDoneCount = 0
-        self.ready = False
-
-        # Set max possible len for ans
-
-        self.inputbox['max_word'] = self.curPath['ans_len']
-
-        # Update the text with current node in path
-
-        for k in self.lb:
-            if self.curStory[k] is not None:
-                if k == 'b':
-                    self.lb[k]['text'] = "Beast: '" + self.curStory[k] + "'"
-                elif k == 'h':
-                    self.lb[k]['text'] = "'" + self.curStory[k] + "'"
-                else:
-                    self.lb[k]['text'] = self.curStory[k]
-            else:
-                self.lb[k]['text'] = ""
-
-        g_evManager.Post(evRefresh())
-
-
-    def ReplaceText(self, text, vars):
-        '''
-        '''
-        
-        #
-        # Break text into characters
-        #
-
-        tempStr = list(text)
-
-        #
-        # Search for special placeholders
-        #
-
-        varI = 0
-        i = text.find('$$$')
-        while i != -1:
-            tempStr[i:i+len('$$$')] = [vars[varI]]
-            text = ''.join(tempStr)
-            i = text.find('$$$')
-            varI += 1
-
-        return text
-
-
-    def GetNode(self, root, nodeId):
-        '''
-        Recursively traverse the path tree to find the node
-
-        @params: nodeId is a tuple that defines that path to that node
-        '''
-        if len(nodeId) == 1:
-            if nodeId[0] in root:
-                return root[nodeId[0]]
-        elif nodeId[0] in root:
-            return self.GetNode(root[nodeId[0]], nodeId[1:])    
 
 
     def GetAnswer(self):
@@ -187,11 +126,92 @@ class KnowledgePath(Simulator):
             g_evManager.Post(evEnd())
             return
 
-        next = tuple(self.curPath['next'])
-        self.curPath = self.GetNode(self.path, next)
+        self.next = tuple(self.curPath['next']) 
+        self.ParseLogic()       
+        self.curPath = GetNode(self.path, self.next)
 
         for k in self.curStory.keys():
-            self.curStory[k] = self.GetNode(self.story, next + (k,))
+            self.curStory[k] = GetNode(self.story, self.next + (k,))
+
+        self.Refresh()
+
+    def ParseLogic(self):
+        #
+        # Build up replacement
+        #
+
+        if self.next[0] == "believer":
+            self.vars = ['Faith']
+            self.isThinker = 0
+
+        elif self.next[0] == "thinker":
+            self.vars = ['Knowledge']
+            self.isThinker = 1
+
+        elif self.next[0] == "a1" or self.next[0] == 'a2':
+            #
+            # Trim out quote
+            #
+
+            trimmedAns = self.ans[1:-1]
+            self.vars = [trimmedAns]
+
+            if self.next[0] == 'a1':
+                self.a1 = trimmedAns
+            else:
+                self.a2 = trimmedAns
+
+    def Refresh(self):
+
+        # Re-init
+
+        self.labelDoneCount = 0
+        self.ready = False
+
+        # Set max possible len for ans
+
+        self.inputbox['max_word'] = self.curPath['ans_len']
+
+        # Update the text with current node in path
+
+        for k in self.lb:
+            if self.curStory[k] is not None:
+                text = self.ParseText(self.curStory[k])
+                if k == 'b':
+                    self.lb[k]['text'] = "Beast: '" + text + "'"
+                elif k == 'h':
+                    self.lb[k]['text'] = "'" + text + "'"
+                else:
+                    self.lb[k]['text'] = text
+            else:
+                self.lb[k]['text'] = ""
+
+        g_evManager.Post(evRefresh())
+
+
+    def ParseText(self, text):
+        '''
+        '''
+
+        #
+        # Break text into characters
+        #
+
+        tempStr = list(text)
+
+        #
+        # Search for special placeholders
+        #
+
+        varI = 0
+        i = text.find('$$$')
+        while i != -1:
+            tempStr[i:i+len('$$$')] = [self.vars[varI]]
+            text = ''.join(tempStr)
+            i = text.find('$$$')
+            varI += 1
+
+        return text
 
 
     def Notify(self, event):
@@ -212,8 +232,20 @@ class KnowledgePath(Simulator):
         
         elif isinstance(event, evAdvance):
             self.AdvancePath()
-            self.Refresh()
 
         elif isinstance(event, evEnd):
             g_evManager.Post(evQuit())
+
+    
+def GetNode(root, nodeId):
+    '''
+    Recursively traverse the path tree to find the node
+
+    @params: nodeId is a tuple that defines that path to that node
+    '''
+    if len(nodeId) == 1:
+        if nodeId[0] in root:
+            return root[nodeId[0]]
+    elif nodeId[0] in root:
+        return GetNode(root[nodeId[0]], nodeId[1:])                
 
