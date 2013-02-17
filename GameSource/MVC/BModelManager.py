@@ -5,11 +5,7 @@ Created on Aug 21, 2012
 '''
 import importlib
 
-import Views.LabelView
-import Controllers.LabelController
 
-import Views.InputboxView
-import Controllers.InputboxController
 
 
 class ModelManager(object):

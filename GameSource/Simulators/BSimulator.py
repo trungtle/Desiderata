@@ -53,10 +53,10 @@ class Simulator(object):
                 self.Init()
                 g_evManager.UnregisterListener(self)
         
-        elif isinstance(event, evUpdatedLabel):
-            self.labelDoneCount += 1
-            if self.labelDoneCount == 1:
-                self.ready = True
+        # elif isinstance(event, evUpdatedLabel):
+        #     self.labelDoneCount += 1
+        #     if self.labelDoneCount == 1:
+        #         self.ready = True
 
 
 class Path1(Simulator):

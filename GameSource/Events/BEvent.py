@@ -87,22 +87,3 @@ class evRMouseDown(Event):
 # ------------------------------------------------------------------------------
 # In-game Events
 # ------------------------------------------------------------------------------
-class evAdvance(Event):
-    def __init__(self):
-        self.name = "Advance Event"
-        self.log = False
-
-class evRefresh(Event):
-    def __init__(self):
-        self.name = "Refresh Event"
-        self.log = False
-
-class evUpdatedLabel(Event):
-    def __init__(self):
-        self.name = "Updated Label Event"
-        self.log = False
-
-class evUpdatedInputbox(Event):
-    def __init__(self):
-        self.name = "Updated Inputbox Event"
-        self.log = False        

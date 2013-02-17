@@ -7,7 +7,7 @@
 	{
 		"fullscreen": false,
 		"size": [1024, 640],
-		"caption": "Desiderata"
+		"caption": "Hello World"
 	},
 	"controller":
 	{
@@ -16,18 +16,8 @@
 	{
 		
 	},
-	"music":
-	{
-		"on": true,
-		"background": "DanceOfTheShadows.wav"
-	},
 	"initial":
 	{
-		"checkPoint": "intro1",
-		"isThinker": false
-		,"hasName": true
-		,"a1": "random"
-		,"a2": "heads"
-		,"a3": "choose the slice"
+
 	}
 }
