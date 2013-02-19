@@ -9,6 +9,7 @@ from   pygame.locals import *
 
 import Diags.BLogger        as ns_logger
 import Graphics.BDraw       as ns_draw
+import Utility.util         as ns_util
 
 import MVC.BController      as ns_controller
 import MVC.BView            as ns_view
@@ -16,6 +17,7 @@ import MVC.BModelManager    as ns_model_manager
 
 import Simulators.BSimulator as ns_sim
 
+from GameSource import CONFIG
 
 class Level(object):
     '''
@@ -47,6 +49,8 @@ class Level(object):
     
         
     def LoadModels(self):
+        s = ns_util.GetModel("LineMovingTarget","level1")
+        self.modelManager.Add(s,"line_level1")
         pass        
     
 

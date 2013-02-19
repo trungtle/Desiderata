@@ -35,6 +35,7 @@ if __name__ == '__main__':
     
         
         # ------------ Main Level Loop --------------- #
+        
         level.spinner.Run()            
 
         nextLevel = level.LevelUp()

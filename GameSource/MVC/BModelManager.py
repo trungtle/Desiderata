@@ -6,7 +6,8 @@ Created on Aug 21, 2012
 import importlib
 
 
-
+import Views.LineMovingTargetView
+import Controllers.LineMovingTargetController
 
 class ModelManager(object):
     '''
@@ -21,16 +22,16 @@ class ModelManager(object):
     def Add(self, model, name):
         name = name
         
-        self.models[name] = model
+        self.models[name] = model["json"]
 
         mStr = "Controllers." + \
-                model["name"].capitalize() + "Controller." + \
-                model["name"].capitalize() + "Controller(model)"
+                model["name"] + "Controller." + \
+                model["name"] + "Controller(model['json'])"
         self.controllers[name] = eval(mStr)
 
         mStr = "Views." + \
-                model["name"].capitalize() + "View." + \
-                model["name"].capitalize() + "View(model)"
+                model["name"] + "View." + \
+                model["name"] + "View(model['json'])"
         self.views[name] = eval(mStr)
 
         ModelManager.MODEL_ID += 1

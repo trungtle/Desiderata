@@ -46,7 +46,9 @@ class LabelController(object):
 
 
 	def Notify(self, event):
-		if isinstance(event, evRefresh):			
+		if isinstance(event, evLMouseDown):			
+
+			print "mouse is pressed"
 
 			#
 			# Refresh if we have a new text

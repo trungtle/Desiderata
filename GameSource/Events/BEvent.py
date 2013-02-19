@@ -78,11 +78,13 @@ class evLMouseDown(Event):
     def __init__(self, mouse_pos):
         self.name = "Left Mouse Down Event"
         self.log = False
+        self.mouse_pos = mouse_pos
 
 class evRMouseDown(Event):
     def __init__(self, mouse_pos):
         self.name = "Right Mouse Down Event"
         self.log = False
+        self.mouse_pos = mouse_pos
               
 # ------------------------------------------------------------------------------
 # In-game Events

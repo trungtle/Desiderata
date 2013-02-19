@@ -6,4 +6,4 @@ def GetModel(name, instance):
 		data = f.read()		
 
 	jsonData = json.loads(data)
-	return jsonData[instance]
+	return {"name": name, "json": jsonData[instance] }
