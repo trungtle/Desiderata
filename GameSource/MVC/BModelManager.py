@@ -7,7 +7,10 @@ import importlib
 
 
 import Views.LineMovingTargetView
+import Views.CircleView
 import Controllers.LineMovingTargetController
+import Controllers.CircleController
+
 
 class ModelManager(object):
     '''

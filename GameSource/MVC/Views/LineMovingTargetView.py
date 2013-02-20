@@ -16,6 +16,7 @@ class LineMovingTargetView(object):
 		
 
 	def Render(self):
+		pass
 		for t in self.m.keys():
 			pos = self.m[t]["pos"]
 			pygame.draw.circle(self.screen, red, pos, 30)

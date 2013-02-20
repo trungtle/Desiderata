@@ -19,7 +19,7 @@ if __name__ == '__main__':
     nextLevel = 1
     
     # ------------ Main Game Loop --------------- #
-    # Level = 0 is the end of game
+    # LevBel = 0 is the end of game
     while nextLevel != 0:
     
         # Import the next level

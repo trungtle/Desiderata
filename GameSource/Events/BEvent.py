@@ -89,3 +89,8 @@ class evRMouseDown(Event):
 # ------------------------------------------------------------------------------
 # In-game Events
 # ------------------------------------------------------------------------------
+class evDrawCircle(Event):
+    def __init__(self, pos):
+        self.name = "Draw Circle at pos Event"
+        self.log = False
+        self.pos = pos

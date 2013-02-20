@@ -29,9 +29,7 @@ class LineMovingTargetController(object):
 
 
 	def Notify(self, event):
-		if isinstance(event, evLMouseDown):			
-			print "LineMovingTarget " + str(event.mouse_pos)
-		elif isinstance(event, evTick):
+		if isinstance(event, evTick):
 			self.update()
 
 

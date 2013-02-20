@@ -51,6 +51,9 @@ class Level(object):
     def LoadModels(self):
         s = ns_util.GetModel("LineMovingTarget","level1")
         self.modelManager.Add(s,"line_level1")
+
+    
+
         pass        
     
 
